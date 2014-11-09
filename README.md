@@ -1,5 +1,4 @@
 # ArtScripting
-- - -
 
 ## 制作例
 - PullDots 点を動かし、近づいたら引かれ合う<br>
