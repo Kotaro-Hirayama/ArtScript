@@ -1,7 +1,7 @@
 # ArtScripting
-===================
+- - -
 
-## 例
+## 制作例
 - PullDots 点を動かし、近づいたら引かれ合う
 http://kotaro-hirayama.github.io/ArtScript/works/PullDots/
 
@@ -13,3 +13,5 @@ http://kotaro-hirayama.github.io/ArtScript/works/FallingBalls/
 
 - AudioVisualization マイクで音を拾い、ビジュアライズ（Chrome等usergetstreaming使用可能環境のみ）
 http://kotaro-hirayama.github.io/ArtScript/works/AudioVisualization/
+
+## 基礎練習
