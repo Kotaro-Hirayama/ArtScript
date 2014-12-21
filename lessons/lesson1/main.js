@@ -27,14 +27,14 @@ window.onload = function() {
       Main.mouseY = e.y;
     }, false);
 
-    Main.obj = [];
-    Main.obj.push(new Main.Ball('sin', 0, 0, 20, red));
-    Main.obj.push(new Main.Ball('cos', 0, 0, 20, blue));
-    Main.obj.push(new Main.Ball('both', 0, 0, 20, yellow));
-    Main.obj.push(new Main.Ball('circle', 0, 0, 20, orange));
-    Main.obj.push(new Main.Ball('ellipse', 0, 0, 20, green));
-    Main.obj.push(new Main.Ball('pulse', 0, 0, 30, purple));
-    Main.obj.push(new Main.Ball('sprite', 0, 0, 20, gray));
+    Main.objs = [];
+    Main.objs.push(new Main.Ball('sin', 0, 0, 20, red));
+    Main.objs.push(new Main.Ball('cos', 0, 0, 20, blue));
+    Main.objs.push(new Main.Ball('both', 0, 0, 20, yellow));
+    Main.objs.push(new Main.Ball('circle', 0, 0, 20, orange));
+    Main.objs.push(new Main.Ball('ellipse', 0, 0, 20, green));
+    Main.objs.push(new Main.Ball('pulse', 0, 0, 30, purple));
+    Main.objs.push(new Main.Ball('sprite', 0, 0, 20, gray));
 
     setInterval(function() {
       Main.update();
@@ -44,14 +44,14 @@ window.onload = function() {
   };
   Main.update = function() {
     var i = 0;
-    for(i = 0; i < Main.obj.length; i++) {
-      Main.obj[i].update();
+    for(i = 0; i < Main.objs.length; i++) {
+      Main.objs[i].update();
     }
   };
   Main.draw = function() {
     var i = 0;
-    for(i = 0; i < Main.obj.length; i++) {
-      Main.obj[i].draw();
+    for(i = 0; i < Main.objs.length; i++) {
+      Main.objs[i].draw();
     }
   };
 

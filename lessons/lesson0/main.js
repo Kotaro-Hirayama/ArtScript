@@ -30,8 +30,8 @@ window.onload = function() {
   */
   // 初期化する
   Main.setup = function() {
-    Main.obj = [];
-    Main.obj.push(new Main.Ball());
+    Main.objs = [];
+    Main.objs.push(new Main.Ball());
 
     setInterval(function() {
       Main.update();
@@ -41,14 +41,14 @@ window.onload = function() {
   };
   Main.update = function() {
     var i = 0;
-    for(i = 0; i < Main.obj.length; i++) {
-      Main.obj[i].update();
+    for(i = 0; i < Main.objs.length; i++) {
+      Main.objs[i].update();
     }
   };
   Main.draw = function() {
     var i = 0;
-    for(i = 0; i < Main.obj.length; i++) {
-      Main.obj[i].draw();
+    for(i = 0; i < Main.objs.length; i++) {
+      Main.objs[i].draw();
     }
   };
 
