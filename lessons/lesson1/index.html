@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width,minimum-scale=1.0" name="viewport">
+  <title>Lesson 1: アニメーションで使う三角関数</title>
+  <style>
+    * {
+      border: 0;
+      padding: 0;
+      margin: 0;
+      outline: 0;
+      box-sizing: border-box;
+      color: #fff;
+      font-family: sans-serif;
+    }
+    #memo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 3000;
+      width: 100%;
+      padding: 20px;
+      background: rgba(0, 0, 0, .3);
+      box-shadow: 0 0 2px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.24);
+    }
+    h1 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 12px;
+    }
+    #canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="memo">
+    <h1>Lesson 1: アニメーションで使う三角関数：sin、cosを利用した動き</h1>
+    <p>青：sin関数、赤：cos関数 -> なめらかな点移動</p>
+    <p>オレンジ：sin、cosを利用した円運動、緑：sin、cosを利用した楕円運動</p>
+    <p>黄：x、yとも三角関数を利用した移動 -> 数学的な動作なのにランダムな動きに見える</p>
+    <p>紫：sin関数を利用した伸縮 -> 脈動しているように見える</p>
+    <p>グレー：マウスとその点の距離と角度</p>
+  </div>
+  <canvas id="canvas"></canvas>
+  <script src="main.js"></script>
+</body>
+</html>
