@@ -18,14 +18,11 @@ window.onload = function() {
   var green = '#27ae60';
   var purple = '#8e44ad';
   var gray = '#7f8c8d';
+  var colorBox = [red, blue, yellow, orange, green, purple, gray];
 
   Main.setup = function() {
-    Main.numOfPoints = 50;
-    Main.points = [];
-    for (var i = 0; i < Main.numOfPoints; i++) {
-      Main.points.push(new Main.Point());
-    }
-    // new Main.Points();
+    Main.objs = [];
+    Main.objs.push(new Main.Points());
 
     setInterval(function() {
       Main.update();
@@ -34,27 +31,19 @@ window.onload = function() {
     }, 1000 / 30);
   };
   Main.update = function() {
-    for (var i = 1; i < Main.numOfPoints - 1; i++) {
-      Main.points[i].update();
+    var i = 0;
+    for (i = 0; i < Main.objs.length; i++) {
+      Main.objs[i].update();
     }
   };
   Main.draw = function() {
-    var xc1, yc1, xc, yc, i;
-
-    Main.context.beginPath();
-    xc1 = (Main.points[0].movePoint(Main.points[0].x) + Main.points[Main.numOfPoints - 1].x) / 2;
-    yc1 = (Main.points[0].movePoint(Main.points[0].y) + Main.points[Main.numOfPoints - 1].y) / 2;
-    Main.context.moveTo(xc1, yc1);
-    for (i = 1; i < Main.numOfPoints - 1; i++) {
-      xc = (Main.points[i].x + Main.points[i + 1].x) / 2;
-      yc = (Main.points[i].y + Main.points[i + 1].y) / 2;
-      Main.context.quadraticCurveTo(Main.points[i].x, Main.points[i].y, xc, yc);
+    var i = 0;
+    for (i = 0; i < Main.objs.length; i++) {
+      Main.objs[i].draw();
     }
-    Main.context.quadraticCurveTo(Main.points[i].x, Main.points[i].y, xc1, yc1);
-    Main.context.stroke();
   };
 
-  // class: Point
+  // class: Points
   Main.Points = function() {
     this.init();
   };
@@ -68,6 +57,7 @@ window.onload = function() {
       }
     },
     update: function() {
+      var that = this;
       for (var i = 1; i < that.numOfPoints - 1; i++) {
         that.points[i].update();
       }
@@ -77,10 +67,10 @@ window.onload = function() {
       var that = this;
 
       Main.context.beginPath();
-      xc1 = (that.points[0].movePoint(that.points[0].x) + that.points[Main.numOfPoints - 1].x) / 2;
-      yc1 = (that.points[0].movePoint(that.points[0].y) + that.points[Main.numOfPoints - 1].y) / 2;
+      xc1 = (that.points[0].movePoint(that.points[0].x) + that.points[that.numOfPoints - 1].x) / 2;
+      yc1 = (that.points[0].movePoint(that.points[0].y) + that.points[that.numOfPoints - 1].y) / 2;
       Main.context.moveTo(xc1, yc1);
-      for (i = 1; i < Main.numOfPoints - 1; i++) {
+      for (i = 1; i < that.numOfPoints - 1; i++) {
         xc = (that.points[i].x + that.points[i + 1].x) / 2;
         yc = (that.points[i].y + that.points[i + 1].y) / 2;
         Main.context.quadraticCurveTo(that.points[i].x, that.points[i].y, xc, yc);

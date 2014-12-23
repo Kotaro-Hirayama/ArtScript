@@ -18,6 +18,7 @@ window.onload = function() {
   var green = '#27ae60';
   var purple = '#8e44ad';
   var gray = '#7f8c8d';
+  var colorBox = [red, blue, yellow, orange, green, purple, gray];
 
 
   /*
