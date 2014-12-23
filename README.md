@@ -13,9 +13,12 @@ http://kotaro-hirayama.github.io/ArtScript/works/AudioVisualization/
 ## 基礎練習
 ### Lesson一覧
 http://kotaro-hirayama.github.io/ArtScript/lessons/
-- Lesson 0: Canvasの描写
+- Lesson 0: Canvasの描写<br>
 Canvasの描写のフローを理解する。
-- Lesson 1: アニメーションで使う三角関数
+http://kotaro-hirayama.github.io/ArtScript/lessons/lesson0
+- Lesson 1: アニメーションで使う三角関数<br>
 sin、cosを利用した動き。
-- Lesson 2: レンダリングテクニック
+http://kotaro-hirayama.github.io/ArtScript/lessons/lesson1
+- Lesson 2: レンダリングテクニック<br>
 直線・曲線の扱いを知ろう。
+http://kotaro-hirayama.github.io/ArtScript/lessons/lesson2
