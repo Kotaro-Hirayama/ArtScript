@@ -11,3 +11,11 @@ http://kotaro-hirayama.github.io/ArtScript/works/FallingBalls/
 http://kotaro-hirayama.github.io/ArtScript/works/AudioVisualization/
 
 ## 基礎練習
+### Lesson一覧
+http://kotaro-hirayama.github.io/ArtScript/lessons/
+- Lesson 0: Canvasの描写
+Canvasの描写のフローを理解する。
+- Lesson 1: アニメーションで使う三角関数
+sin、cosを利用した動き。
+- Lesson 2: レンダリングテクニック
+直線・曲線の扱いを知ろう。
