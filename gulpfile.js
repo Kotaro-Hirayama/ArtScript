@@ -5,7 +5,7 @@ var browserSync = require('browser-sync');
 gulp.task('browserSync', function() {
   return browserSync.init(null, {
     server: {
-      baseDir: 'lessons/'
+      baseDir: ['lessons/', 'works/']
     }
   });
 });
@@ -15,7 +15,7 @@ gulp.task('liveReload', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(['lessons/**/*.html', 'lessons/**/*.js'], ['liveReload']);
+  gulp.watch(['**/*.html', '**/*.js'], ['liveReload']);
 });
 
 gulp.task('default', ['browserSync', 'watch']);

@@ -14,6 +14,22 @@
       color: #fff;
       font-family: sans-serif;
     }
+    #memo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 3000;
+      width: 100%;
+      padding: 20px;
+      background: rgba(0, 0, 0, .3);
+      box-shadow: 0 0 2px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.24);
+    }
+    h1 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 12px;
+    }
     #canvas {
       position: absolute;
       top: 0;
@@ -22,6 +38,10 @@
   </style>
 </head>
 <body>
+  <div id="memo">
+    <h1>Lesson 0: Canvasの描写</h1>
+    <p>どういうフローでCanvasに物を描くか把握しましょう</p>
+  </div>
   <canvas id="canvas"></canvas>
   <script src="main.js"></script>
 </body>
